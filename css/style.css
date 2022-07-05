@@ -469,6 +469,28 @@ body {
     text-decoration: underline;
 }
 
+/* ! Footer */
+.main-footer {
+    padding-block: 2.375rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    letter-spacing: -1, 5px;
+}
+
+.main-footer .container {
+    max-width: 408px;
+}
+
+.main-footer__text-top {
+    margin-bottom: 3.75rem;
+}
+
+.main-footer a {
+    color: var(--violet);
+    text-decoration: underline;
+}
+
 /* -------------------------------------------------------------------------------- */
 /* ! TABLET VERSION */
 /* -------------------------------------------------------------------------------- */
