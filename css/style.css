@@ -6,6 +6,7 @@
     --blue: #0084FD;
     --lightblue: #B5DDFF;
     --violet: #9792E4;
+    --yellow: #FDC15F;
 }
 
 /* ! Regole reset */
@@ -408,6 +409,66 @@ body {
     margin-right: 0.5rem;
 }
 
+/* ! Get Started */
+.getstarted {
+    padding-block: 3.75rem;
+    text-align: center;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+.getstarted .container {
+    max-width: 564px;
+}
+
+.getstarted__title {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.getstarted__subtitle {
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+    line-height: 1.4;
+}
+
+.getstarted__free {
+    margin-bottom: 1.625rem;
+    font-size: 4.0625rem;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+    color: var(--yellow);
+}
+
+.getstarted__text {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.getstarted .btn.btn--large {
+    line-height: 65px;
+    padding-inline: 4.6875rem;
+    margin-bottom: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--violet);
+    border-radius: 2rem;
+}
+
+.getstarted__copyright {
+    font-size: 1rem;
+}
+
+.getstarted__copyright a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 /* -------------------------------------------------------------------------------- */
 /* ! TABLET VERSION */
 /* -------------------------------------------------------------------------------- */
@@ -516,6 +577,23 @@ body {
         max-width: 230px;
     }
 
+    /* ! Get Started */
+    .getstarted .container {
+        padding-inline: 0;
+    }
+
+    .getstarted__subtitle {
+        font-size: 3rem;
+    }
+
+    .getstarted__free {
+        font-size: 5.625rem;
+    }
+
+    .getstarted .btn.btn--large {
+        letter-spacing: 2.5px;
+    }
+
 }
 
 
@@ -601,5 +679,10 @@ body {
     .aboutus .row {
         padding-inline: 3.125rem;
         gap: 5rem;
+    }
+
+    /* ! Get Started */
+    .getstarted__free {
+        font-size: 6.25rem;
     }
 }
