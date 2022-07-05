@@ -295,6 +295,57 @@ body {
     font-size: 1.5rem;
 }
 
+/* ! Benefits */
+.benefits {
+    background-color: var(--violet);
+    padding-block: 4.0625rem;
+}
+
+.benefits .row:first-child .col:first-child {
+    flex-grow: 1;
+}
+
+.benefits__title {
+    font-size: 2.125rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4.0625rem;
+}
+
+.benefits .card {
+    padding: 2.8125rem 1.875rem;
+    background-color: #fff;
+}
+
+.benefits .card__title,
+.benefits .card__number {
+    color: var(--violet);
+}
+
+.benefits .card__number {
+    margin-bottom: 1.25rem;
+    font-size: 3.125rem;
+}
+
+.benefits .card__title {
+    margin-bottom: 1.5625rem;
+    font-size: 1.5rem;
+}
+
+.benefits .card__text {
+    margin-bottom: 1.875rem;
+}
+
+.benefits .btn {
+    padding-inline: 3.125rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+
 /* -------------------------------------------------------------------------------- */
 /* ! TABLET VERSION */
 /* -------------------------------------------------------------------------------- */
@@ -359,7 +410,22 @@ body {
 
 }
 
+/* ! Benefits */
+.benefits__title {
+    font-size: 2.7rem;
+}
 
+.benefits .card-wrapper {
+    gap: 30px;
+}
+
+.benefits .card-wrapper .col {
+    flex-basis: calc(calc(100% - 30px) / 2);
+}
+
+.benefits .card__number {
+    font-size: 5rem;
+}
 
 /* -------------------------------------------------------------------------------- */
 /* ! DESKTOP VERSION */
@@ -432,5 +498,10 @@ body {
     /* ! Testimonials */
     .testimonials .card {
         gap: 3.75rem;
+    }
+
+    /* Benefits */
+    .benefits .card-wrapper .col {
+        flex-basis: calc(calc(100% - calc(30px * 2)) / 3);
     }
 }
