@@ -47,7 +47,7 @@ body {
 .container {
     max-width: 1200px;
     margin-inline: auto;
-    padding-inline: var(--p-32);
+    padding-inline: 2rem;
 }
 
 .row {
@@ -57,15 +57,16 @@ body {
 /* ! Utility */
 .btn {
     display: inline-block;
+    line-height: 2.5625rem;
     border-radius: 20px;
 }
 
 .btn.btn--big {
-    line-height: 46px;
+    line-height: 2.875rem;
 }
 
 .btn.btn--small {
-    line-height: 34px;
+    line-height: 2.125rem;
     font-size: 16px;
 }
 
@@ -79,12 +80,13 @@ body {
 
 .hamburger .hamburger__item {
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: #fff;
 }
 
 /* ! Header */
 .main-header {
+    padding-block: 1rem;
     background-color: var(--blue);
     font-size: 18px;
 }
@@ -136,7 +138,7 @@ body {
     }
 
     .main-header__list button {
-        padding: 0.5em 1em;
+        padding-inline: 1em;
         font-size: 18px;
     }
 }
