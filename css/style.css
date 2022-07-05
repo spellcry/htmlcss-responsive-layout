@@ -36,7 +36,8 @@ button {
     font-family: "Source Sans Pro", sans-serif;
 }
 
-p {
+p,
+blockquote {
     line-height: 1.7;
 }
 
@@ -218,6 +219,82 @@ body {
     background-color: var(--violet);
 }
 
+/* ! Testimonials */
+.testimonials {
+    font-size: 20px;
+    padding-block: 3.75rem 6.875rem;
+    text-align: center;
+}
+
+.testimonials .card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.25rem;
+    border-radius: 48px;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+.testimonials .card:not(:last-child) {
+    margin-bottom: 1.875rem;
+}
+
+.testimonials .card__img img {
+    max-width: 200px;
+    margin-inline: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.testimonials .intro__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.testimonials .intro__title {
+    font-size: 2.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--violet);
+}
+
+.testimonials .intro__text {
+    margin-bottom: 3.125rem;
+}
+
+.testimonials .description__text {
+    margin-bottom: 1.5rem;
+    line-height: initial;
+}
+
+.testimonials .description__text::before {
+    content: "\201C";
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    top: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.testimonials .description__text::after {
+    content: "\201D";
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    bottom: -18px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.testimonials .description__author {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 /* -------------------------------------------------------------------------------- */
 /* ! TABLET VERSION */
 /* -------------------------------------------------------------------------------- */
@@ -249,6 +326,35 @@ body {
     /* ! Strategic */
     .strategic {
         font-size: 18px;
+    }
+
+    /* ! Testimonials */
+    .testimonials .intro__title {
+        font-size: 2.6875rem;
+    }
+
+    .testimonials .card {
+        flex-direction: row;
+        padding-inline: 16px;
+        gap: 1.875rem;
+        text-align: left;
+    }
+
+    .testimonials .card .col:first-child {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 200px;
+    }
+
+    .testimonials .card .col:last-child {
+        flex-basis: 0;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .testimonials .card__img img {
+        margin-inline: 0;
     }
 
 }
@@ -321,5 +427,10 @@ body {
 
     .strategic .card-wrapper .col:last-child .card {
         align-self: flex-end;
+    }
+
+    /* ! Testimonials */
+    .testimonials .card {
+        gap: 3.75rem;
     }
 }
