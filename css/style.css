@@ -245,6 +245,7 @@ body {
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;
+    object-position: center;
 }
 
 .testimonials .intro__subtitle {
@@ -345,6 +346,67 @@ body {
     color: #fff;
 }
 
+/* ! About Us */
+.aboutus {
+    padding-block: 6.25rem 9.375rem;
+}
+
+.aboutus .row {
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+.aboutus .description__title {
+    font-size: 2.875rem;
+    color: var(--violet);
+    margin-bottom: 2.5rem;
+}
+
+.aboutus .description__text {
+    font-size: 1.125rem;
+}
+
+.aboutus .cit__img {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.aboutus .cit__img img {
+    max-width: 175px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aboutus .cit__img::after {
+    content: "\201C";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    color: var(--violet);
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 0.7;
+}
+
+.aboutus .cit__text {
+    font-size: 1.8125rem;
+    font-weight: bold;
+    color: var(--violet);
+    margin-bottom: 1.5625rem;
+}
+
+.aboutus .btn.btn--small {
+    padding-inline: 0.75rem;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+.aboutus .btn.btn--small i {
+    margin-right: 0.5rem;
+}
 
 /* -------------------------------------------------------------------------------- */
 /* ! TABLET VERSION */
@@ -408,24 +470,54 @@ body {
         margin-inline: 0;
     }
 
+    /* ! Benefits */
+    .benefits__title {
+        font-size: 2.7rem;
+    }
+
+    .benefits .card-wrapper {
+        gap: 30px;
+    }
+
+    .benefits .card-wrapper .col {
+        flex-basis: calc(calc(100% - 30px) / 2);
+    }
+
+    .benefits .card__number {
+        font-size: 5rem;
+    }
+
+    /* ! About Us */
+    .aboutus .row {
+        padding-inline: 1.875rem;
+    }
+
+    .aboutus .row {
+        flex-direction: row;
+    }
+
+    .aboutus .col:first-child {
+        flex-basis: 60%;
+    }
+
+    .aboutus .col:last-child {
+        flex-basis: 40%;
+    }
+
+    .aboutus .description__title {
+        font-size: 4.375rem;
+    }
+
+    .aboutus .cit__img:after {
+        left: 170px;
+    }
+
+    .aboutus .cit__img img {
+        max-width: 230px;
+    }
+
 }
 
-/* ! Benefits */
-.benefits__title {
-    font-size: 2.7rem;
-}
-
-.benefits .card-wrapper {
-    gap: 30px;
-}
-
-.benefits .card-wrapper .col {
-    flex-basis: calc(calc(100% - 30px) / 2);
-}
-
-.benefits .card__number {
-    font-size: 5rem;
-}
 
 /* -------------------------------------------------------------------------------- */
 /* ! DESKTOP VERSION */
@@ -503,5 +595,11 @@ body {
     /* Benefits */
     .benefits .card-wrapper .col {
         flex-basis: calc(calc(100% - calc(30px * 2)) / 3);
+    }
+
+    /* ! About Us */
+    .aboutus .row {
+        padding-inline: 3.125rem;
+        gap: 5rem;
     }
 }
