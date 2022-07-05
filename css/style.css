@@ -5,6 +5,7 @@
 :root {
     --blue: #0084FD;
     --lightblue: #B5DDFF;
+    --violet: #9792E4;
 }
 
 /* ! Regole reset */
@@ -35,6 +36,10 @@ button {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+p {
+    line-height: 1.7;
+}
+
 /* ! Regole layout */
 body {
     font-family: "Source Sans Pro", sans-serif;
@@ -44,6 +49,10 @@ body {
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 2rem;
+}
+
+.container--small {
+    max-width: 880px;
 }
 
 .row {
@@ -173,21 +182,57 @@ body {
     margin-right: 0.625rem;
 }
 
+/* ! Strategic */
+.strategic {
+    padding-block: 4.0625rem;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+.strategic .col:first-child .card__img {
+    margin-bottom: 5rem;
+}
+
+.strategic .col:first-child .card__title {
+    margin-bottom: 3.5rem;
+    font-size: 2rem;
+}
+
+.strategic .col:last-child .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    border-radius: 48px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.strategic .card__arrow {
+    width: fit-content;
+    margin-inline: auto;
+    aspect-ratio: 1/1;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--violet);
+}
+
 /* -------------------------------------------------------------------------------- */
 /* ! TABLET VERSION */
 /* -------------------------------------------------------------------------------- */
 @media (min-width: 810px) {
 
     /* ! Hero */
-    .card-wrapper .col {
+    .hero .card-wrapper .col {
         flex-basis: calc(calc(100% - calc(24px * 2)) / 3);
     }
 
-    .card-wrapper .col.col--big {
+    .hero .card-wrapper .col.col--big {
         flex-basis: calc(calc(100% - calc(24px / 2)) / 3 * 2);
     }
 
-    .card {
+    .hero .card {
         height: 100%;
         padding: 1.5rem;
         font-size: 1.125rem;
@@ -199,6 +244,11 @@ body {
 
     .hero .card__img img {
         width: 50%;
+    }
+
+    /* ! Strategic */
+    .strategic {
+        font-size: 18px;
     }
 
 }
@@ -247,4 +297,29 @@ body {
         align-self: flex-end;
     }
 
+    /* ! Strategic */
+    .strategic {
+        padding-top: 8.75rem;
+    }
+
+    .strategic .card-wrapper {
+        flex-wrap: nowrap;
+        gap: 4.0625rem;
+    }
+
+    .strategic .card-wrapper .col {
+        flex-basis: 50%;
+    }
+
+    .strategic .col:first-child .card__img {
+        margin-bottom: 8.75rem;
+    }
+
+    .strategic .card-wrapper .col:last-child {
+        display: flex;
+    }
+
+    .strategic .card-wrapper .col:last-child .card {
+        align-self: flex-end;
+    }
 }
