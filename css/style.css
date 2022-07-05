@@ -1,0 +1,142 @@
+/* -------------------------------------------------------------------------------- */
+/* ! MOBILE VERSION */
+/* -------------------------------------------------------------------------------- */
+
+:root {
+    --p-24: 1.5rem;
+    --p-32: 2rem;
+    --p-48: 3rem;
+    --m-24: 1.5rem;
+    --m-80: 5rem;
+    --blue: #0084FD;
+}
+
+/* ! Regole reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+menu,
+ol,
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/* ! Regole layout */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--p-32);
+}
+
+.row {
+    display: flex;
+}
+
+/* ! Utility */
+.btn {
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.btn.btn--big {
+    line-height: 46px;
+}
+
+.btn.btn--small {
+    line-height: 34px;
+    font-size: 16px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.hamburger .hamburger__item {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* ! Header */
+.main-header {
+    background-color: var(--blue);
+    font-size: 18px;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-header__logo {
+    max-width: 80px;
+}
+
+.main-header__list {
+    display: none;
+}
+
+.main-header .hamburger {
+    margin-left: auto;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* ! TABLET VERSION */
+/* -------------------------------------------------------------------------------- */
+@media (min-width: 810px) {}
+
+
+
+/* -------------------------------------------------------------------------------- */
+/* ! DESKTOP VERSION */
+/* -------------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+    /* ! Header */
+    .hamburger {
+        display: none;
+    }
+
+    .main-header__list {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        column-gap: 2rem;
+    }
+
+    .main-header__list .item {
+        padding-block: 0.5em;
+    }
+
+    .main-header__list button {
+        padding: 0.5em 1em;
+        font-size: 18px;
+    }
+}
