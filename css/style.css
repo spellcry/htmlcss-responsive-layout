@@ -502,7 +502,8 @@ body {
     }
 
     .hero .card-wrapper .col.col--big {
-        flex-basis: calc(calc(100% - calc(24px / 2)) / 3 * 2);
+        flex-basis: calc(calc(100% - 24px) / 3 * 2);
+        flex-grow: 2;
     }
 
     .hero .card {
