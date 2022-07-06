@@ -633,8 +633,11 @@ body {
     .main-header__list {
         display: flex;
         align-items: center;
-        margin-left: auto;
         column-gap: 2rem;
+    }
+
+    .main-nav {
+        margin-left: auto;
     }
 
     .main-header__list .item {
